@@ -2,7 +2,7 @@ using System;
 
 public class Guild Assessment
 {
-   public decimal Calculate(decimal weight)
+   public decimal CalculateOrderAmount(decimal weight)
    {
 	public decimal orderAmount;
       switch (weight)
@@ -10,12 +10,12 @@ public class Guild Assessment
          case weight <= 1:
 		orderAmount = 15;
             break;
-         case weight >¬ 1 … weight <=¬ 10:
+         case weight <= 10:
             orderAmount = 5 lbs;
             break; 
          case weight > 10:
-            orderAmount = (Remaining Inventory minus 5 lbs);   
-            break;¬
+            orderAmount = (weight - 5);   
+            break;
          
    default:
             Console.WriteLine("The weight is invalid.");
@@ -24,4 +24,22 @@ public class Guild Assessment
 	Return orderAmount;
    }
 }
-## C# language
+
+## Test Cases
+
+runTests(0)
+orderAmount=15
+
+runTests(0.5)
+orderAmount=15
+
+runTests(5)
+orderAmount=5
+
+runTests(11)
+orderAmount(6)
+
+runTests(-1)
+The weight is invalid
+
+##C# language
